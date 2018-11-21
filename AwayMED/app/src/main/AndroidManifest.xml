@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Hospital" />
-        <activity android:name=".medicoContratado"></activity>
+        <activity android:name=".medicoContratado" />
+        <activity android:name=".selecao_medicos" />
+        <activity android:name=".Aguardando"></activity>
     </application>
 
 </manifest>

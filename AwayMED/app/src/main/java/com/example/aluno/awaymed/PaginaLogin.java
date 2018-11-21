@@ -1,5 +1,6 @@
 package com.example.aluno.awaymed;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,13 +21,20 @@ public class PaginaLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(usuario.getText().toString().equals("medicoContratado")){
-                    setContentView(R.layout.activity_medico_contratado );
+                    Intent intent = new Intent(PaginaLogin.this, medicoContratado.class);
+                    startActivity(intent);
+                    //setContentView(R.layout.activity_medico_contratado );
                 }else{
                     if(usuario.getText().toString().equals("hospital")){
-                        setContentView(R.layout.activity_hospital );
+                        //setContentView(R.layout.activity_hospital );
+                        Intent intent = new Intent(PaginaLogin.this, Hospital.class);
+                        startActivity(intent);
+
                     }else{
                         if(usuario.getText().toString().equals("medicoContratante")){
-                            setContentView(R.layout.activity_hospital );
+                            //setContentView(R.layout.activity_hospital );
+                            Intent intent = new Intent(PaginaLogin.this, Hospital.class);
+                            startActivity(intent);
                         }
                     }
                 }
